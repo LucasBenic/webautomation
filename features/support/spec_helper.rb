@@ -1,5 +1,5 @@
 require 'capybara/rspec'
-#require 'capybara/cucumber'
+require 'capybara/cucumber'
 require 'site_prism'
 require 'capybara'
 require 'rspec'
@@ -17,17 +17,6 @@ Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
 
-Capybara.register_driver :firefox do |app|
-  options = Selenium::WebDriver::Firefox::Options.new
-  options.add_argument('-start-maximized')
-  options.add_argument('--disable-infobars')
-  options.add_argument('--disable-dev-shm-usage')
-  options.add_argument('--no-sandbox')
-  options.add_argument('--disable-browser-side-navigation')
-  options.add_argument('--disable-gpu')
-  Capybara::Selenium::Driver.new(app, browser: :firefox, options: options)
-end
-
 RSpec.configure do |config|
   config.include Capybara::DSL
 
@@ -39,18 +28,22 @@ RSpec.configure do |config|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
-  Capybara.configure do |config|
-    config.app_host = 'https://www.glassdoor.com.br/'
-    config.default_max_wait_time = 15
-    config.default_driver = :selenium_chrome
-  end
-
-  config.around do |example|
-    puts '~> ' + example.metadata[:example_group][:full_description]
-    [:chrome, :firefox].each do |browser|
-      Capybara.current_driver = browser
-      puts "~~> #{example.description} @ #{browser}"
-      example.run
+  #save screenshot if test fails
+  After do |scenario|
+    if scenario.failed?
+      nome = scenario.name.gsub(/[^A-Za-z0-9 ]/, '').tr(' ','_')
+      date = Date.today.to_s
+      page.save_screenshot('screenshot/' + date + '-'+ nome + '.png')
     end
   end
+
+  Capybara.configure do |config|
+    config.app_host = 'https://www.glassdoor.com.br/'
+    config.default_max_wait_time = 20
+    config.default_driver = :selenium_chrome
+    Capybara.page.driver.browser.manage.window.maximize
+  end
 end
+
+
+

@@ -1,8 +1,0 @@
-searching for vacancy
-searching for company
-looking the salaries
-checjing the interview
-
-Verify that the user is able to compare salaries for different companies.
-Verify that the user is able to view company reviews and ratings.
-Verify that the user is able to search for jobs based on job title and location.

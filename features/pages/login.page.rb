@@ -1,15 +1,16 @@
 class LoginPage < SitePrism::Page
-    set_url ''
-
+    
     element :useremail, '#inlineUserEmail'
     element :userpass, '#inlineUserPassword'
 
-
+    #set your credentials
+    $email = 'lucas.test22@hotmail.com'
+    $password = 'Pass_2023@22'
 
     def login
-        useremail.set 'lucas.test22@hotmail.com'
+        useremail.set($email)
         click_button 'Entrar com e-mail'
-        userpass.set 'Pass_2023@22'
+        userpass.set($password)
         find('button[name="submit"]').click
     end
 end
