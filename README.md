@@ -117,4 +117,3 @@ If the test fails a screenshot will be taken and placed in the screenshot folder
 ### Contact
 
 If you have any questions or feedback about this project, please contact me at lucas.pro23@outlook.com.
-
