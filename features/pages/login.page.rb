@@ -5,7 +5,7 @@ class LoginPage < SitePrism::Page
 
     #set your credentials
     $email = '<your email>'
-    $password = 'your password'
+    $password = '<your password>'
 
     def login
         useremail.set($email)
