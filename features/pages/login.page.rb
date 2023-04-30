@@ -4,8 +4,8 @@ class LoginPage < SitePrism::Page
     element :userpass, '#inlineUserPassword'
 
     #set your credentials
-    $email = 'lucas.test22@hotmail.com'
-    $password = 'Pass_2023@22'
+    $email = '<your email>'
+    $password = 'your password'
 
     def login
         useremail.set($email)
