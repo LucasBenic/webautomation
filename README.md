@@ -1,12 +1,35 @@
 # Web Automation (Glassdoor)
 
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
-
 
 
 > This project uses Ruby and some frameworks to automate various actions on the Glassdoor website, including logging in, searching for jobs and updating profile information.
 
+<h3 align="left">Languages and Tools:</h3>
+
+<p align="left">
+  <a href="https://git-scm.com/" target="_blank" rel="noreferrer" title="Git">
+    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
+  </a>
+  <a href="https://www.ruby-lang.org/en/" target="_blank" rel="noreferrer" title="Ruby">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg" alt="ruby" width="40" height="40"/>
+  </a>
+  <a href="https://cucumber.io/" target="_blank" rel="noreferrer" title="Cucumber">
+    <img src="https://cdn.worldvectorlogo.com/logos/cucumber.svg" alt="cucumber" width="40" height="40"/>
+  </a>
+  <a href="https://teamcapybara.github.io/capybara/" target="_blank" rel="noreferrer" title="Capybara">
+    <img src="https://img.stackshare.io/service/2595/capybara.png" alt="capybara" width="40" height="40"/>
+  </a>
+  <a href="https://rspec.info/" target="_blank" rel="noreferrer" title="RSpec">
+    <img src="https://rspec.info/images/logo_ogp.png" alt="rspec" width="40" height="40"/>
+  </a>
+  <a href="https://www.selenium.dev/documentation/en/webdriver/" target="_blank" rel="noreferrer" title="Selenium WebDriver">
+    <img src="https://static-00.iconduck.com/assets.00/selenium-icon-512x496-obrnvg2v.png" alt="Selenium WebDriver" width="40" height="40"/>
+</a>
+</p>
+
+
 ## Features and Scenarios
+
 
 ### Profile
  - Updating personal name
@@ -20,11 +43,11 @@
 - Filtering for the latest job vacancies
 - Job Posting Details
 
-## 💻 Pré-requisitos
+## 💻 Prerequisites
 
-<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
 To run this project, you will need the following:
 
+* Glassdoor account
 * Google Chrome web browser
 * Ruby 2.6 or higher
 * ChromeDriver executable file for your operating system
@@ -33,77 +56,64 @@ To run this project, you will need the following:
 - You can download the latest version of ChromeDriver for your operating system from the following link: https://chromedriver.chromium.org/downloads
 - Once you have downloaded the ChromeDriver executable file, make sure to add its location to your system's PATH environment variable.
 
-## 🚀 Instalando o projeto
+## 🚀 Installiing the project
 
-Para instalar o projeto, siga estas etapas:
+To install the project, follow these steps:
 
 Clone the project:
 ```
-git clone https://github.com/your-username/glassdoor-automation.git
+git clone https://github.com/LucasBenic/webautomation.git
+```
+Go to the project directory and open a terminal.
+Install the Bundle gem:
+```
+gem install bundler
+```
+Now install all the necessary gems:
+```
+bundle install
 ```
 
-## ☕ Usando <nome_do_projeto>
 
-Para usar <nome_do, siga estas etapas:
+## ☕ Using the project
 
+To use the project, follow these steps:
+
+First, you need to set your Glassdoor credentials. To do that, follow the steps:
+
+1. Go to the project directory.
+2. Go to features folder.
+3. Go to pages folder.
+4. Go to login.page.rb file.
+5. Set your email and password in the email and password variables and save it.
+
+![image](https://user-images.githubusercontent.com/128319082/235361005-24a76e42-9535-4350-ab05-1f5977cc1d0e.png)
+
+
+To run all the features, just type cucumber in your terminal:
 ```
-<exemplo_de_uso>
+cucumber
 ```
+To run a specific feature, type:
+```
+cucumber --tags @<tagname>
+```
+To run a specific scenario, type:
+```
+cucumber --name "<scenario name>"
+```
+After running the tests a report will be generated and placed in the report folder.
 
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
-
-## 📫 Contribuindo para <nome_do_projeto>
-<!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
-Para contribuir com <nome_do_projeto>, siga estas etapas:
-
-1. Bifurque este repositório.
-2. Crie um branch: `git checkout -b <nome_branch>`.
-3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
-5. Crie a solicitação de pull.
-
-Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
-
-## 🤝 Colaboradores
-
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
-        <sub>
-          <b>Iuri Silva</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="#">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
-        <sub>
-          <b>Mark Zuckerberg</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
-        <sub>
-          <b>Steve Jobs</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+![image](https://user-images.githubusercontent.com/128319082/235360668-8b1559eb-cc58-496c-8f5d-e0dd0c915b64.png)
 
 
-## 😄 Seja um dos contribuidores<br>
+If the test fails a screenshot will be taken and placed in the screenshot folder.
 
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
+![image](https://user-images.githubusercontent.com/128319082/235360640-202da796-0957-4076-99fe-50a90c099848.png)
 
-## 📝 Licença
 
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
-[⬆ Voltar ao topo](#nome-do-projeto)<br>
+
+### Contact
+
+If you have any questions or feedback about this project, please contact me at lucas.pro23@outlook.com.
