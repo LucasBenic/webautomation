@@ -28,7 +28,6 @@
 </p>
 
 
-<<<<<<< HEAD
 ## Features and Scenarios
 
 
@@ -118,7 +117,4 @@ If the test fails a screenshot will be taken and placed in the screenshot folder
 ### Contact
 
 If you have any questions or feedback about this project, please contact me at lucas.pro23@outlook.com.
-=======
-Test automation is an essential part of the software development life cycle and helps in ensuring the quality of the software. The approach outlined in this document provides a high-level overview of the test automation process for Glassdoor. It is important to continuously update and maintain the test suite to ensure that it covers all the functional and non-functional requirements of the Glassdoor website.
 
->>>>>>> main
